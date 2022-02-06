@@ -11,10 +11,10 @@ function getRandomHexColor() {
 }
 
 stopBtnEl.disabled = true;
-let timerId = null;
+let colorTimerId = null;
 
 function onStartBtnClick() {
-    timeId = setInterval(() => {
+    colorTimerId = setInterval(() => {
         startBtnEl.disabled = true;
         stopBtnEl.disabled = false;
 
@@ -25,7 +25,7 @@ function onStartBtnClick() {
 }
 
 function onStopBtnClick() {
-    clearInterval(timeId);
+    clearInterval(colorTimerId);
 
     startBtnEl.disabled = false;
     stopBtnEl.disabled = true;
